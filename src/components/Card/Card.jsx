@@ -2,7 +2,7 @@ const data = [
   {
     id: 1,
     company: "Photosnap",
-    logo: './images/photosnap.svg',
+    logo: "./images/photosnap.svg",
     new: true,
     featured: true,
     position: "Senior Frontend Developer",
@@ -151,25 +151,31 @@ const data = [
   },
 ];
 function Card() {
-  return data.map( (info) => {
-  return (<article key={info.id}>
-    <img src={info.logo}/>
-    <div>
-      <p>{info.company}</p>
-      <p>{info.position}</p>
-      <div>
-        <p>{info.postedAt} </p>
-        <p>{info.contract}</p>
-        <p>{info.location}</p>
-      </div>
-      <ul> 
-        <li>{info.role}</li>
-        <li>{info.level}</li>
-        {info.languages.map( item => <li key={item}>{item}</li>)}
-        {info.tools.map( item => <li key={item}>{item}</li>)}
-      </ul>
-    </div>
-  </article>)
+  return data.map((info) => {
+    return (
+      <article key={info.id}>
+        <img src={info.logo} />
+        <div>
+          <p>{info.company}</p>
+          <p>{info.position}</p>
+          <div>
+            <p>{info.postedAt} </p>
+            <p>{info.contract}</p>
+            <p>{info.location}</p>
+          </div>
+          <ul>
+            <li>{info.role}</li>
+            <li>{info.level}</li>
+            {info.languages.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+            {info.tools.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      </article>
+    );
   });
 }
 
