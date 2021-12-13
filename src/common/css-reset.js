@@ -13,6 +13,7 @@ const GlobalStyled = createGlobalStyle`
   }
   html, body {
     height: 100%;
+    background-color: hsl(185, 67%, 96%);
   }
   body {
     line-height: 1.5;
