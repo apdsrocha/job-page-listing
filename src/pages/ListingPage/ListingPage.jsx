@@ -1,7 +1,16 @@
+import Card from "../../components/Card";
+import Header from "../../components/Header";
+import Container from "../../components/Container";
+
 function ListingPage() {
   return (
-  <h1>Page with list</h1>
-  ); 
+    <>
+      <Header></Header>
+      <Container>
+        <Card></Card>
+      </Container>
+    </>
+  );
 }
 
 export default ListingPage;
