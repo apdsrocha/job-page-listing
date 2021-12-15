@@ -1,5 +1,7 @@
+import * as S from "./styles";
+
 function Header() {
-  return <header></header>
+  return <S.Header />;
 }
 
 export default Header;

@@ -1,8 +1,12 @@
-import ListingPage from './pages/ListingPage';
+import ListingPage from "./pages/ListingPage";
+import GlobalStyled from "./common/css-reset";
 
 function App() {
   return (
-    <ListingPage />
+    <>
+      <GlobalStyled />
+      <ListingPage />
+    </>
   );
 }
 
