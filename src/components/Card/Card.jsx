@@ -1,3 +1,5 @@
+import * as S from './styles';
+
 const data = [
   {
     id: 1,
@@ -153,28 +155,28 @@ const data = [
 function Card() {
   return data.map((info) => {
     return (
-      <article key={info.id}>
-        <img src={info.logo} />
+      <S.Card key={info.id}>
+        <S.Avatar src={info.logo} />
         <div>
-          <p>{info.company}</p>
-          <p>{info.position}</p>
-          <div>
-            <p>{info.postedAt} </p>
-            <p>{info.contract}</p>
-            <p>{info.location}</p>
-          </div>
-          <ul>
-            <li>{info.role}</li>
-            <li>{info.level}</li>
+          <S.CompanyName>{info.company}</S.CompanyName>
+          <S.JobTitle>{info.position}</S.JobTitle>
+          <S.PostInfo>
+            <S.PostInfoTxt>{info.postedAt} </S.PostInfoTxt>
+            <S.PostInfoTxt>{info.contract}</S.PostInfoTxt>
+            <S.PostInfoTxt>{info.location}</S.PostInfoTxt>
+          </S.PostInfo>
+          <S.Tags>
+            <S.Tag>{info.role}</S.Tag>
+            <S.Tag>{info.level}</S.Tag>
             {info.languages.map((item) => (
-              <li key={item}>{item}</li>
+              <S.Tag key={item}>{item}</S.Tag>
             ))}
             {info.tools.map((item) => (
-              <li key={item}>{item}</li>
+              <S.Tag key={item}>{item}</S.Tag>
             ))}
-          </ul>
+          </S.Tags>
         </div>
-      </article>
+      </S.Card>
     );
   });
 }
