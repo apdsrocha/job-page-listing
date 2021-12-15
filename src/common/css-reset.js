@@ -1,15 +1,19 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyled = createGlobalStyle`
   /*
-    Josh's Custom CSS Reset
+    Most of this CSS reset is Josh's Custom CSS Reset 
     https://www.joshwcomeau.com/css/custom-css-reset/
+
+    + Added project customizations.
   */
+  * {
+    font-family: 'Spartan', sans-serif;
+    color: hsl(180, 14%, 20%);
+    margin: 0;
+   }
   *, *::before, *::after {
     box-sizing: border-box;
-  }
-  * {
-    margin: 0;
   }
   html, body {
     height: 100%;
